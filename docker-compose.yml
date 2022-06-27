@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  pm2web:
+    build: .
+    restart: always
+    ports:
+      - 8000:4343
+    environment:
+        APP_USERNAME: admin
+        RAW_APP_PASSWORD: pass
+        HOST: 0.0.0.0
+        PORT: 4343
